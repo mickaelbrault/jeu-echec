@@ -1,86 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="brault.controller.ChessBoardController">
+
+<AnchorPane prefHeight="800.0" prefWidth="1060.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="brault.controller.ChessBoardController">
    <children>
-      <Pane fx:id="chessBoard" prefHeight="800.0" prefWidth="800.0">
+      <GridPane prefHeight="800.0" prefWidth="800.0" style="-fx-border-color: black;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Pane fx:id="a8" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b8" layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c8" layoutX="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d8" layoutX="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e8" layoutX="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f8" layoutX="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g8" layoutX="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h8" layoutX="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h7" layoutX="700.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g7" layoutX="600.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f7" layoutX="500.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e7" layoutX="400.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d7" layoutX="300.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c7" layoutX="200.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b7" layoutX="100.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a7" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h6" layoutX="700.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g6" layoutX="600.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f6" layoutX="500.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e6" layoutX="400.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d6" layoutX="300.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c6" layoutX="200.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b6" layoutX="100.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a6" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h5" layoutX="700.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g5" layoutX="600.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f5" layoutX="500.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e5" layoutX="400.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d5" layoutX="300.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c5" layoutX="200.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b5" layoutX="100.0" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a5" layoutY="300.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h4" layoutX="700.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g4" layoutX="600.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f4" layoutX="500.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e4" layoutX="400.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d4" layoutX="300.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c4" layoutX="200.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b4" layoutX="100.0" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a4" layoutY="400.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h3" layoutX="700.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g3" layoutX="600.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f3" layoutX="500.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e3" layoutX="400.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d3" layoutX="300.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c3" layoutX="200.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b3" layoutX="100.0" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a3" layoutY="500.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h2" layoutX="700.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g2" layoutX="600.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f2" layoutX="500.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e2" layoutX="400.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d2" layoutX="300.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c2" layoutX="200.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b2" layoutX="100.0" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a2" layoutY="600.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="h1" layoutX="700.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="g1" layoutX="600.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="f1" layoutX="500.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="e1" layoutX="400.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="d1" layoutX="300.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="c1" layoutX="200.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="b1" layoutX="100.0" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;" />
-            <Pane fx:id="a1" layoutY="700.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black;">
+            <Pane fx:id="a1" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="7">
                <children>
-                  <Pane fx:id="tower1" prefHeight="100.0" prefWidth="100.0" >
-                     <children>
-                        <Label layoutX="36.0" layoutY="42.0" text="Tower1" />
-                     </children>
-                  </Pane>
-               </children></Pane>
+                  <ImageView fx:id="rook1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../rook.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="b1" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="knight1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../knight.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="c1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="bishop1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../bishop.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="d1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="queen1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../queen.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="e1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="king1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../king.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="f1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="bishop2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../bishop.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="g1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="knight2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../knight.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="h1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+               <children>
+                  <ImageView fx:id="rook2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../rook.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="a2" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+               <children>
+                  <ImageView fx:id="pawn2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../pawn.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pawn2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Pane fx:id="pawn51" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
          </children>
-      </Pane>
+      </GridPane>
    </children>
 </AnchorPane>
