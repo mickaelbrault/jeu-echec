@@ -4,19 +4,20 @@ package brault.model;
 public class ChessPiece{
 	
 	private String id;
-	private String name;
-	private String picture;
-	private double locationX;
-	private double locationY;
+	private Integer row;
+	private Integer column;
+	private int team;
 	
 	/**
 	 * @param name
 	 * @param picture
+	 * @param team => 1 pour les noirs et 2 pour les blancs
 	 */
-	public ChessPiece(String id, double locationX, double locationY) {
+	public ChessPiece(String id, Integer row, Integer column, int team) {
 		this.id = id;
-		this.locationX = locationX;
-		this.locationY = locationY;
+		this.row = row;
+		this.column = column;
+		this.team = team;
 	}
 
 	public String getId() {
@@ -27,37 +28,28 @@ public class ChessPiece{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public Integer getRow() {
+		return row;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setRow(Integer row) {
+		this.row = row;
 	}
 
-	public String getPicture() {
-		return picture;
+	public Integer getColumn() {
+		return column;
 	}
 
-	public void setPicture(String picture) {
-		this.picture = picture;
+	public void setColumn(Integer column) {
+		this.column = column;
 	}
 
-	public double getLocationX() {
-		return locationX;
+	public int getTeam() {
+		return team;
 	}
 
-	public void setLocationX(double locationX) {
-		this.locationX = locationX;
+	public void setTeam(int team) {
+		this.team = team;
 	}
-
-	public double getLocationY() {
-		return locationY;
-	}
-
-	public void setLocationY(double locationY) {
-		this.locationY = locationY;
-	}
-	
 	
 }
