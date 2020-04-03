@@ -79,15 +79,55 @@ public class ChessBoardController implements Initializable {
 		initAllChessPiece();
 	}
 
-	private void selectPiece() {
-
-		if (chessPieceSelect != null) {
-
-			System.out.println(chessPieceSelect);
+	@FXML
+	private void selectPane(MouseEvent e) {
+		
+		if (chessPieceIsSelected == false) {
+			source1 = (Node) e.getSource();
+			
+			chessPieceSelect = (Pane) source1;
+			
+			if(!chessPieceSelect.getChildren().isEmpty()) {
+				chessPieceIsSelected = true;
+			} else {
+				System.out.println("La case est vide");
+			}
+			
+		} else {
+			
+			source2 = (Node) e.getSource();
+			
+			for (ChessPiece chessPiece : listChessPiece) {
+				
+				if(GridPane.getColumnIndex(source1) == chessPiece.getColumn() && GridPane.getRowIndex(source1) == chessPiece.getRow()) {
+					chessCaseSelect = (Pane) source2;
+					System.out.println(chessCaseSelect);
+					System.out.println("Selection 2 => " + chessCaseSelect.getChildren());
+					
+					// rencontre de pièce vérifier dans quel team est la pièce
+					
+					if(!chessCaseSelect.getChildren().isEmpty()) {
+						
+						System.out.println("Ya du monde");
+					} else {
+						chessPiece.setColumn(GridPane.getColumnIndex(source2));
+						chessPiece.setRow(GridPane.getRowIndex(source2));
+						
+						chessImgSelect = choicePieceToMove(chessPiece);
+						chessCaseSelect.getChildren().add(chessImgSelect);
+						
+					}
+				}
+			}
+			
+			chessPieceIsSelected = false;
 		}
-
 	}
-
+	
+	
+	/*
+	 * Initialisation des pièces d'echec
+	 */
 	private void initAllChessPiece() {
 
 		// Noir
@@ -158,56 +198,6 @@ public class ChessBoardController implements Initializable {
 		listChessPiece.add(pawn15);
 		ChessPiece pawn16 = new ChessPiece("pawn16", GridPane.getRowIndex(h7), GridPane.getColumnIndex(h7),2);
 		listChessPiece.add(pawn16);
-
-	}
-
-	@FXML
-	private void selectPane(MouseEvent e) {
-		
-
-		if (chessPieceIsSelected == false) {
-			source1 = (Node) e.getSource();
-			
-			chessPieceSelect = (Pane) source1;
-			
-			System.out.println("Selection 1 => " + chessPieceSelect.getChildren());
-			
-			if(!chessPieceSelect.getChildren().isEmpty()) {
-				chessPieceIsSelected = true;
-			} else {
-				System.out.println("La case est vide");
-			}
-			
-		} else {
-			
-			source2 = (Node) e.getSource();
-			
-			for (ChessPiece chessPiece : listChessPiece) {
-				
-				if(GridPane.getColumnIndex(source1) == chessPiece.getColumn() && GridPane.getRowIndex(source1) == chessPiece.getRow()) {
-					chessCaseSelect = (Pane) source2;
-					System.out.println(chessCaseSelect);
-					System.out.println("Selection 2 => " + chessCaseSelect.getChildren());
-					
-					if(!chessCaseSelect.getChildren().isEmpty()) {
-						System.out.println("Ya du monde");
-					} else {
-						chessPiece.setColumn(GridPane.getColumnIndex(source2));
-						chessPiece.setRow(GridPane.getRowIndex(source2));
-						
-						chessImgSelect = choicePieceToMove(chessPiece);
-						chessCaseSelect.getChildren().add(chessImgSelect);
-						
-					}
-				}
-			}
-			
-			
-			chessPieceIsSelected = false;
-			
-		}
-		
-		System.out.println("Premier click " + chessPieceIsSelected);
 	}
 	
 	
